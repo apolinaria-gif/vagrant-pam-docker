@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Если диски еще не размечены, создаем разделы и файловую систему прямо на лету
+
 for disk in /dev/sdb /dev/sdc; do
     if [ -b "$disk" ]; then
         if ! blkid "${disk}1" >/dev/null 2>&1; then
